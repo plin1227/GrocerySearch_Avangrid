@@ -1,0 +1,32 @@
+<!-- Navbar-->
+<nav class="navbar" style="background-color: #088F8F;">
+    <!--Title-->
+    <div class="navbar-brand ml-10 font-weight-bold"> Grocery Search</div>
+        <!--Search Bar-->
+        <div class="input-group-prepend">
+          <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="Search products" class="rounded">
+          <button type="submit" class="btn btn-outline-light" (click)="onSubmit()">Search</button>
+        </div>          
+</nav>
+
+<!--Displaying dynamic (filtered) search-->
+<ng-container *ngIf="filteredProducts.length > 0;">
+    <ul class="list-group w-50 offset-md-9 position-fixed">
+      <li *ngFor="let product of filteredProducts" class="list-group-item">
+        {{ product.name }} 
+      </li>
+    </ul>
+</ng-container>
+
+<!--Displaying valid search result-->
+<div *ngIf="displayResult" class="text-center">
+  <div *ngIf="matchFound; else inValidSearch">
+    <img src={{source}} alt={{searchTerm}} class="w-25 h-25">
+    <p>Name: {{searchTerm}}, Price: ${{price}}, Category: {{category}}</p>
+  </div>
+</div>
+ 
+<!--Displaying INvalid search result-->
+<ng-template #inValidSearch>
+  <p>No matches found</p>
+</ng-template>

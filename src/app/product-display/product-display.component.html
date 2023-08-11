@@ -1,1 +1,17 @@
-<p>product-display works!</p>
+<!-- Display Table with product names and their category -->
+<table class = "table text-left">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products">
+            <td>{{product.name}}</td>
+            <td>{{getCategory(product.categoryId)}}</td>
+        </tr>
+    </tbody>
+</table>
+
+

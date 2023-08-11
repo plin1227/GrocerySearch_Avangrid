@@ -1,1 +1,14 @@
-<p>category-display works!</p>
+<!-- Display Table with category names -->
+<table class = "table w-25">
+    <thead>
+        <tr>
+            <th>List of Categories</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let category of categories">
+            <td>{{category.name}}</td>
+        </tr>
+    </tbody>
+</table>
+
