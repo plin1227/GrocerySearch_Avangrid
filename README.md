@@ -2,25 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
-## Development server
+## Instructions on how to run web application locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+After downloading all files into one folder, open Command Prompt and go to the project root directory
+Run the command ng serve. 
+You may be promted to install packages.
+Once the project is compiled successfully, open http://localhost:4200/ on your browser.
+The website will be displayed there
 
-## Code scaffolding
+## Web application discription
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+There is a bar on top which states the title and has a search bar
+Below that are two tables: one showing the categories and the other the products
+The search bar allows for dynamic search
+Once the "Search" button is clicked, more information abouit the product will be shown if the product exist.
+Else you will be motified that no matches are found
 
 ## Further help
 
